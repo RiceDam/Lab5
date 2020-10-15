@@ -4,6 +4,9 @@
 #include <sstream>
 #include "rpn_calculator.hpp"
 
+/*
+ * Checks the operation that is being applied
+ */
 Abstract_Operation *RPNCalculator::operation_type(char c) {
     Abstract_Operation *a;
     switch (c) {
@@ -22,6 +25,11 @@ Abstract_Operation *RPNCalculator::operation_type(char c) {
     }
 }
 
+/*
+ * Takes the top 2 values of the stack,
+ * Performs an operation with those 2 values,
+ * Push the result back into the stack
+ */
 void RPNCalculator::perform(Abstract_Operation *p) {
     int b = st.top();
     st.pop();
@@ -44,6 +52,12 @@ void RPNCalculator::perform(Abstract_Operation *p) {
     }
 }
 
+/*
+ * Calculates the answer for the formula in the string
+ * Iterates through every word in the string and checks if it is a digit
+ * If it is a digit, add it to the stack
+ * If it is an operation, apply the operation
+ */
 int RPNCalculator::process_formula(std::string formula) {
     std::istringstream iss(formula);
     while (!iss.eof()) {
