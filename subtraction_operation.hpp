@@ -18,9 +18,7 @@ public:
     virtual ~Subtraction_Operation();
 };
 
-Subtraction_Operation::~Subtraction_Operation() {
-    std::cout << "Subtraction Operation destroyed" << std::endl;
-}
+inline Subtraction_Operation::~Subtraction_Operation() {};
 
 
 #endif //LAB5_SUBTRACTION_OPERATION_HPP

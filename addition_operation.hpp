@@ -19,10 +19,6 @@ public:
 
     virtual ~Addition_Operation();
 };
-
-Addition_Operation::~Addition_Operation() {
-    std::cout << "Addition Operation destroyed" << std::endl;
-}
-
+inline Addition_Operation::~Addition_Operation() {};
 
 #endif //LAB5_ADDITION_OPERATION_HPP

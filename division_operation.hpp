@@ -6,19 +6,20 @@
 
 #include "abstract_operation.hpp"
 
-class Division_Operation : public Abstract_Operation{
+class Division_Operation : public Abstract_Operation {
 public:
     static const char DIVISION_CODE = '/';
+
     Division_Operation() : Abstract_Operation(DIVISION_CODE) {
 
     };
+
     int perform(int a, int b) {
         return a / b;
     }
-    ~Division_Operation();
+
+    virtual ~Division_Operation();
 };
-Division_Operation::~Division_Operation() {
-    std::cout << "Division Operation destroyed" << std::endl;
-}
+inline Division_Operation::~Division_Operation() {};
 
 #endif //LAB5_DIVISION_OPERATION_HPP

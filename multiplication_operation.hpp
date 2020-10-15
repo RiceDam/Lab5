@@ -15,12 +15,10 @@ public:
     int perform(int a, int b) {
         return a * b;
     }
-    ~Multiplication_Operation();
+    virtual ~Multiplication_Operation();
 };
 
-Multiplication_Operation::~Multiplication_Operation() {
-    std::cout << "Multiplication Operation destroyed" << std::endl;
-}
+inline Multiplication_Operation::~Multiplication_Operation() {};
 
 
 #endif //LAB5_MULTIPLICATION_OPERATION_HPP

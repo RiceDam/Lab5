@@ -13,8 +13,9 @@ public:
     virtual ~Operation();
 };
 
-Operation::~Operation() {
-    std::cout << "Operation has been destroyed" << std::endl;
-}
+inline Operation::~Operation() {};
+inline int Operation::perform(int a, int b) {};
+inline char Operation::get_code() {};
+
 
 #endif //LAB5_OPERATION_HPP

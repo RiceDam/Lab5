@@ -17,11 +17,10 @@ public:
     char get_code() {
         return operation_type;
     };
+
     virtual ~Abstract_Operation();
 };
 
-Abstract_Operation::~Abstract_Operation() {
-    std::cout << "Abstract Operation destroyed" << std::endl;
-}
+inline Abstract_Operation::~Abstract_Operation() {};
 
 #endif //LAB5_ABSTRACT_OPERATION_HPP
